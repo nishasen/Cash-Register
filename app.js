@@ -21,6 +21,11 @@ btnCheck.addEventListener("click", function validateBillAndCashAmount() {
     }
 });
 
+function showMessage(msg) {
+    errorMessage.style.display = "block";
+    errorMessage.innerText = msg;
+}
+
 function hideMessage() {
     errorMessage.style.display = "none";
 }
@@ -35,7 +40,4 @@ function calculateChange(amountToBeReturned){
     }
 }
 
-function showMessage(msg) {
-    errorMessage.style.display = "block";
-    errorMessage.innerText = msg;
-}
+
