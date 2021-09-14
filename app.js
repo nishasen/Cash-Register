@@ -9,15 +9,19 @@ const availableNotes = [2000, 500, 100, 20, 10, 5, 1]
 
 btnCheck.addEventListener("click", function validateBillAndCashAmount() {
     hideMessage();
-    if(billAmount.value > 0) {
-        if(cashGiven.value >= billAmount.value) {
-            const amountToBeReturned = cashGiven.value - billAmount.value;
-            calculateChange(amountToBeReturned);
+    if(billAmount.value && cashGiven.value){
+        if(billAmount.value > 0) {
+            if(cashGiven.value >= billAmount.value) {
+                const amountToBeReturned = cashGiven.value - billAmount.value;
+                calculateChange(amountToBeReturned);
+            } else {
+                showMessage("Do you wanna wash plates?");
+            }
         } else {
-            showMessage("Do you wanna wash plates?");
+           showMessage("Bill amount is invalid");
         }
     } else {
-       showMessage("Bill amount is invalid");
+        showMessage("Please enter values in both the inputs")
     }
 });
 
