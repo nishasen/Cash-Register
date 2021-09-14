@@ -67,3 +67,22 @@ table, th, td {
   table {
       margin-bottom: 1rem;
   }
+
+  .footer {
+    text-align: center;
+    margin-bottom: -1rem;
+}
+
+.footer ul {
+    padding-inline-start: 0rem;
+}
+
+.footer-head {
+    font-size: 1.5rem;
+    padding: 0.5rem
+}
+
+.social-links {
+    display: inline;
+    padding: 0.5rem;
+}
